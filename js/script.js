@@ -64,6 +64,7 @@ function calculadora(){
             console.log(compra_dolares_blue)
 
             input_dolares.value = compra_dolares_blue
+            
 
             input_dolares.value = Intl.NumberFormat("en-US", {
                 style: "currency",
