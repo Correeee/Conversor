@@ -14,12 +14,12 @@ html{
 }
 
 body{
+    height: 98vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: var(--color-fondo);
     user-select: none;
-    height: 95vh;
 }
 
 h1{
