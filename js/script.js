@@ -39,23 +39,31 @@ function api(){
     
         blue_compra.innerText = "$" + dolar_blue_compra
         blue_venta.innerText = "$" + dolar_blue_venta
+
+        input_pesos.placeholder=`ARS ${dolar_blue_venta}`;
+        input_dolares.placeholder= "USD 1";
+
       // Aquí puedes usar los datos recibidos
     })
     .catch(error => console.error(error));
 }
 
+
 setInterval(api , 100);
 
 
 function calculadora(){
-    
         input_pesos.addEventListener("keyup" , function(e){
             input_pesos = e.target.value;
             console.log("INPUT PESOS:" , input_pesos)
             console.log("INPUT DÓLARES:" , input_dolares.value)
             let compra_dolares_blue = input_pesos / dolar_blue_venta;
             console.log("USD" , compra_dolares_blue.toFixed(2))
-                input_dolares.value = compra_dolares_blue.toFixed(2)
+            console.log(Intl.NumberFormat("en-US").format(compra_dolares_blue))
+            input_dolares.value = Intl.NumberFormat("en-US", {
+                style: "currency",
+                currency: "USD"
+            }).format(compra_dolares_blue)
         })
 
         
@@ -65,9 +73,13 @@ function calculadora(){
             console.log("INPUT PESOS:" , input_pesos.value)
             let venta_dolares_blue = input_dolares * dolar_blue_venta;
             console.log("ARS" , venta_dolares_blue.toFixed(2))
-            input_pesos.value = venta_dolares_blue.toFixed(2);
+            input_pesos.value = Intl.NumberFormat("en-US", {
+                style: "currency",
+                currency: "ARS"
+            }).format(venta_dolares_blue)
         })
 
 }
+
 
 calculadora();
