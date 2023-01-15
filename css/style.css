@@ -133,6 +133,14 @@ input::placeholder{
     background-color: var(--color-verde);
 }
 
+.btn__cambio{
+    font-size: 1.5rem;
+    color:  white;
+    background: var(--color-azul);
+    border: 3px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+}
 
 .div__dolares{
     display: flex;

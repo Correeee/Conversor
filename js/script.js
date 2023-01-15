@@ -9,6 +9,8 @@ let blue_compra = document.getElementById("blue_compra")
 let input_pesos = document.getElementById("input_pesos");
 let input_dolares = document.getElementById("input_dolares");
 
+let btn_cambio = document.getElementById("btn_cambio")
+
 let dolar_oficial_compra;
 let dolar_oficial_venta;
 let dolar_blue_compra;
@@ -46,27 +48,39 @@ setInterval(api , 100);
 
 
 function calculadora(){
+    
+        input_pesos.addEventListener("keyup" , function(e){
+            input_pesos = e.target.value;
+            console.log("INPUT PESOS:" , input_pesos)
+            console.log("INPUT DÓLARES:" , input_dolares)
+            let compra_dolares_blue = input_pesos / dolar_blue_venta;
+                input_dolares.value = compra_dolares_blue
 
-    input_pesos.addEventListener("keyup" , function(e){
-        input_pesos = parseInt(e.target.value);
-        let compra_dolares_blue = input_pesos / dolar_blue_venta;
-        console.log(compra_dolares_blue)
-        input_dolares.value = compra_dolares_blue
+
+        })
+
+        input_dolares.addEventListener("keyup" , function(e){
+            input_dolares = e.target.value;
+            console.log("INPUT DÓLARES:" , input_dolares)
+            console.log("INPUT PESOS:" , input_pesos)
+            let venta_dolares_blue = input_dolares * dolar_blue_venta;
+            input_pesos.value = venta_dolares_blue;
     })
-
-    input_dolares.addEventListener("keyup" , function(e){
-        input_dolares = parseInt(e.target.value);
-        console.log(input_dolares)
-        let venta_dolares_blue = input_dolares * dolar_blue_venta;
-        console.log(venta_dolares_blue)
-        input_pesos.value = venta_dolares_blue;
-    })
-
 }
+
+// function btn(){
+
+//     btn_cambio.addEventListener("click" , function(e){
+//         if(btn_cambio.textContent == "↓"){
+//             btn_cambio.textContent = "↑";
+//             btn_cambio.style.backgroundColor="#52b788"
+//         }
+//         else if(btn_cambio.textContent == "↑"){
+//             btn_cambio.textContent = "↓";
+//             btn_cambio.style.backgroundColor="#457b9d"
+//         }
+//     })
+// }
+
 calculadora();
-
-
-
-
-
 
