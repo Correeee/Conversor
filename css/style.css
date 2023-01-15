@@ -1,0 +1,218 @@
+:root{
+    --color-rojo: #e63946;
+    --color-azul: #457b9d;
+    --color-fondo: #f0d02f;
+    --color-verde: #52b788;
+}
+
+html{
+    font-size: 62,5%;
+    color: white;
+    margin: 0 0;
+    padding: 0 0;
+    font-family: 'Alata', sans-serif;
+}
+
+body{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-content: center;
+    background-color: var(--color-fondo);
+    user-select: none;
+}
+
+h1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 5rem;
+    user-select: none;
+    text-shadow: 7px 7px var(--color-azul);
+    margin: 1rem 0;
+}
+
+.div__body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.div__input{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.div__calculadora{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 0;
+    border: 5px solid white;
+    border-radius: 10px;
+    background-color: var(--color-rojo);
+    width: 25rem;
+    height: 20rem;
+}
+
+.titulo__oficial{
+    font-size: 2rem;
+    color: var(--color-fondo);
+    width: 18rem;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.titulo__blue{
+    font-size: 2rem;
+    color: var(--color-fondo);
+    width: 18rem;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.titulo__calculadora{
+    text-shadow: 5px 5px var(--color-azul);
+    width: 20rem;
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 2rem 0;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+
+button{
+    width: 3rem;
+    height: 3rem;
+    text-align: center;
+}
+
+p{
+    width: 8rem;
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 0 0;
+    text-align: center;
+}
+
+input{
+    margin: 1rem 0;
+    width: 15rem;
+    height: 2.5rem;
+    text-align: center;
+    font-size: larger;
+    font-family: 'Alata', sans-serif;
+    border: 3px solid white;
+    border-radius: 5px;
+    color: white;
+}
+
+input:focus{
+    outline: none;
+    border: 3px solid black;
+}
+
+input::placeholder{
+    color: white;
+}
+
+#input_pesos{
+    background-color: var(--color-azul);
+}
+
+#input_dolares{
+    background-color: var(--color-verde);
+}
+
+
+.div__dolares{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    background-color: var(--color-rojo);
+    border: 5px solid white;
+    border-radius: 10px;
+    width: 40rem;
+    height: 20rem;
+    margin: 1rem 0;
+}
+
+.div__compraventa{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.div__compra, .div__venta{
+    display: flex;
+    flex-direction: row;
+}
+
+.div__dolar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0;
+    width: 35rem;
+}
+
+.hora{
+    display: flex;
+    flex-direction: row;
+    font-size: 4rem;
+    background-color: var(--color-verde);
+    border: 5px solid white;
+    border-radius: 10px;
+    width: 30rem;
+}
+
+.toastify{
+    background: linear-gradient(to right, #457b9d);
+    width: 18rem;
+    height: 2rem;
+    font-size: larger;
+    text-align: center;
+    user-select: none;
+    border: 3px solid white;
+    border-radius: 10px;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0.25rem 0.25rem;
+}
+
+h4{
+    font-size: medium;
+    margin: 0 0;
+    user-select: none;
+}
+
+a{
+    font-size: larger;
+    text-decoration: none;
+    color: var(--color-rojo);
+    transition: 0.2s;
+}
+
+a:hover{
+    color: var(--color-azul);
+}
+
+
+/*MEDIA*/
