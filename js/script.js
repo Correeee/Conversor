@@ -123,7 +123,5 @@ function borrar_input(){
 
 }
 
-
-
 borrar_input()
 calculadora();

@@ -247,6 +247,10 @@ a:hover{
     .div__dolares{
         width: 25rem;
     }
+
+    .div__calculadora{
+        height: 18rem;
+    }
 }
 
 @media screen and (max-width: 425px ) {
@@ -265,6 +269,7 @@ a:hover{
 
     .div__calculadora{
         width: 20rem;
+        height: 17rem;
     }
 }
 
@@ -276,6 +281,7 @@ a:hover{
 
     .div__calculadora{
         width: 17rem;
+        height: 15rem;
     }
 
     .titulo__calculadora{
