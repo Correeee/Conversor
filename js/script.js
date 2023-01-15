@@ -54,6 +54,7 @@ function calculadora(){
             console.log("INPUT PESOS:" , input_pesos)
             console.log("INPUT DÓLARES:" , input_dolares.value)
             let compra_dolares_blue = input_pesos / dolar_blue_venta;
+            console.log("USD" , compra_dolares_blue.toFixed(2))
                 input_dolares.value = compra_dolares_blue.toFixed(2)
         })
 
@@ -63,6 +64,7 @@ function calculadora(){
             console.log("INPUT DÓLARES:" , input_dolares)
             console.log("INPUT PESOS:" , input_pesos.value)
             let venta_dolares_blue = input_dolares * dolar_blue_venta;
+            console.log("ARS" , venta_dolares_blue.toFixed(2))
             input_pesos.value = venta_dolares_blue.toFixed(2);
         })
 

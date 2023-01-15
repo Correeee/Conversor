@@ -41,6 +41,7 @@ h1{
 .div__input{
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     width: 100%;
 }
@@ -48,37 +49,35 @@ h1{
 .div__calculadora{
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    margin: 1rem 0;
     border: 5px solid white;
     border-radius: 10px;
     background-color: var(--color-rojo);
     width: 25rem;
     height: 20rem;
+    margin: 2rem 0;
 }
 
 .titulo__oficial{
     font-size: 2rem;
     color: var(--color-fondo);
-    width: 18rem;
     text-align: center;
-    margin: 1rem 0;
+    margin: 0.5rem 0;
 }
 
 .titulo__blue{
     font-size: 2rem;
     color: var(--color-fondo);
-    width: 18rem;
     text-align: center;
-    margin: 1rem 0;
+    margin: 0.5rem 0;
 }
 
 .titulo__calculadora{
     text-shadow: 5px 5px var(--color-azul);
-    width: 20rem;
     text-align: center;
     font-size: 2.5rem;
-    margin: 2rem 0;
+    margin: 1rem 0;
 }
 
 input[type=number]::-webkit-inner-spin-button,
@@ -142,16 +141,12 @@ input::placeholder{
 .div__dolares{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    justify-items: center;
-    align-items: center;
+    justify-content: space-around;
     background-color: var(--color-rojo);
     border: 5px solid white;
     border-radius: 10px;
     width: 40rem;
     height: 20rem;
-    margin: 1rem 0;
 }
 
 .div__compraventa{
@@ -159,6 +154,7 @@ input::placeholder{
     flex-direction: column;
     justify-content: center;
     align-content: center;
+    text-align: center;
 }
 
 .div__compra, .div__venta{
@@ -169,6 +165,7 @@ input::placeholder{
 .div__dolar{
     display: flex;
     flex-direction: column;
+    justify-items: center;
     align-items: center;
     margin: 0 0;
 }
@@ -246,8 +243,16 @@ a:hover{
 
 @media screen and (max-width: 425px ) {
     
+    .titulo__oficial, .titulo__blue{
+        font-size: 1.5rem;
+    }
+    p{
+        font-size: 1.2rem;
+    }
+
     .div__dolares{
         width: 20rem;
+        height: 15rem;
     }
 
     .div__calculadora{
