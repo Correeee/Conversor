@@ -8,6 +8,8 @@ let blue_compra = document.getElementById("blue_compra")
 
 let input_pesos = document.getElementById("input_pesos");
 let input_dolares = document.getElementById("input_dolares");
+input_pesos.value = ""
+input_dolares.value = ""
 
 let btn_cambio = document.getElementById("btn_cambio")
 
@@ -53,6 +55,7 @@ setInterval(api , 100);
 
 
 function calculadora(){
+
         input_pesos.addEventListener("keyup" , function(e){
 
             input_pesos = parseInt(e.target.value);
@@ -113,9 +116,10 @@ function borrar_input(){
     let form = document.getElementById("form");
 
     form.addEventListener("focusout" , function(e){
-        location.reload()
+        if(input_dolares > 0 || input_pesos > 0){
+            location.reload()
+        }
     })
-
 
 }
 
