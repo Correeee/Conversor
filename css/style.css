@@ -118,7 +118,7 @@ input:focus{
 }
 
 input::placeholder{
-    color: white;
+    color: gainsboro;
 }
 
 #input_pesos{
