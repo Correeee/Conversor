@@ -52,35 +52,20 @@ function calculadora(){
         input_pesos.addEventListener("keyup" , function(e){
             input_pesos = e.target.value;
             console.log("INPUT PESOS:" , input_pesos)
-            console.log("INPUT DÓLARES:" , input_dolares)
+            console.log("INPUT DÓLARES:" , input_dolares.value)
             let compra_dolares_blue = input_pesos / dolar_blue_venta;
                 input_dolares.value = compra_dolares_blue
-
-
         })
 
+        
         input_dolares.addEventListener("keyup" , function(e){
             input_dolares = e.target.value;
             console.log("INPUT DÓLARES:" , input_dolares)
-            console.log("INPUT PESOS:" , input_pesos)
+            console.log("INPUT PESOS:" , input_pesos.value)
             let venta_dolares_blue = input_dolares * dolar_blue_venta;
             input_pesos.value = venta_dolares_blue;
-    })
+        })
+
 }
 
-// function btn(){
-
-//     btn_cambio.addEventListener("click" , function(e){
-//         if(btn_cambio.textContent == "↓"){
-//             btn_cambio.textContent = "↑";
-//             btn_cambio.style.backgroundColor="#52b788"
-//         }
-//         else if(btn_cambio.textContent == "↑"){
-//             btn_cambio.textContent = "↓";
-//             btn_cambio.style.backgroundColor="#457b9d"
-//         }
-//     })
-// }
-
 calculadora();
-

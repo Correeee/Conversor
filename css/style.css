@@ -14,7 +14,6 @@ html{
 }
 
 body{
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -224,3 +223,7 @@ a:hover{
 
 
 /*MEDIA*/
+
+@media screen and (max-width: ) {
+    
+}
