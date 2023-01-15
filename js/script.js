@@ -18,7 +18,6 @@ let dolar_oficial_venta;
 let dolar_blue_compra;
 let dolar_blue_venta;
 
-
 function api(){
     fetch('https://api.bluelytics.com.ar/v2/latest', {
         method: 'GET',
