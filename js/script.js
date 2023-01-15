@@ -29,10 +29,10 @@ function api(){
     .then(data => {
         // console.log(data);
 
-        dolar_oficial_compra = parseInt(data.oficial.value_buy);
-        dolar_oficial_venta = parseInt(data.oficial.value_sell);
-        dolar_blue_compra = parseInt(data.blue.value_buy);
-        dolar_blue_venta = parseInt(data.blue.value_sell);
+        dolar_oficial_compra = data.oficial.value_buy.toFixed(2);
+        dolar_oficial_venta = data.oficial.value_sell.toFixed(2);
+        dolar_blue_compra = data.blue.value_buy.toFixed(2);
+        dolar_blue_venta = data.blue.value_sell.toFixed(2);
 
         oficial_compra.innerText = "$" + dolar_oficial_compra
         oficial_venta.innerText = "$" + dolar_oficial_venta
@@ -41,7 +41,7 @@ function api(){
         blue_venta.innerText = "$" + dolar_blue_venta
 
         input_pesos.placeholder=`ARS ${dolar_blue_venta}`;
-        input_dolares.placeholder= "USD 1";
+        input_dolares.placeholder= "USD 1.00";
 
       // Aquí puedes usar los datos recibidos
     })
@@ -54,32 +54,71 @@ setInterval(api , 100);
 
 function calculadora(){
         input_pesos.addEventListener("keyup" , function(e){
-            input_pesos = e.target.value;
-            console.log("INPUT PESOS:" , input_pesos)
-            console.log("INPUT DÓLARES:" , input_dolares.value)
-            let compra_dolares_blue = input_pesos / dolar_blue_venta;
-            console.log("USD" , compra_dolares_blue.toFixed(2))
-            console.log(Intl.NumberFormat("en-US").format(compra_dolares_blue))
+
+            input_pesos = parseInt(e.target.value);
+
+            let compra_dolares_blue = input_pesos / dolar_blue_venta; //OPERACIÓN
+
+            compra_dolares_blue = parseFloat(compra_dolares_blue.toFixed(2))
+
+            console.log(compra_dolares_blue)
+
+            input_dolares.value = compra_dolares_blue
+
             input_dolares.value = Intl.NumberFormat("en-US", {
                 style: "currency",
                 currency: "USD"
             }).format(compra_dolares_blue)
+
+            if(input_dolares.value == "$" + NaN){
+                input_dolares.value = ""
+            }
+            
+
+            console.log("INPUT PESOS:" , input_pesos)
+            console.log("INPUT DÓLARES:" , input_dolares.value)            
+
         })
 
         
         input_dolares.addEventListener("keyup" , function(e){
-            input_dolares = e.target.value;
-            console.log("INPUT DÓLARES:" , input_dolares)
-            console.log("INPUT PESOS:" , input_pesos.value)
-            let venta_dolares_blue = input_dolares * dolar_blue_venta;
-            console.log("ARS" , venta_dolares_blue.toFixed(2))
+
+            input_dolares = parseInt(e.target.value);
+
+            let venta_dolares_blue = input_dolares * dolar_blue_venta;  //OPERACIÓN
+
+            venta_dolares_blue = parseFloat(venta_dolares_blue.toFixed(2))
+            
+            input_pesos.value = venta_dolares_blue
+            
             input_pesos.value = Intl.NumberFormat("en-US", {
                 style: "currency",
                 currency: "ARS"
             }).format(venta_dolares_blue)
+
+            if(input_pesos.value == "ARS" + NaN){
+                input_pesos.value = ""
+            }
+
+            console.log("INPUT PESOS:" , input_pesos.value)
+            console.log("INPUT DÓLARES:" , input_dolares)        
         })
 
 }
 
 
+function borrar_input(){
+
+    let form = document.getElementById("form");
+
+    form.addEventListener("focusout" , function(e){
+        location.reload()
+    })
+
+
+}
+
+
+
+borrar_input()
 calculadora();
