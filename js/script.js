@@ -88,7 +88,7 @@ function calculadora(){
 
             input_dolares = parseInt(e.target.value);
 
-            let venta_dolares_blue = input_dolares * dolar_blue_venta;  //OPERACIÓN
+            let venta_dolares_blue = input_dolares * dolar_blue_compra;  //OPERACIÓN
 
             venta_dolares_blue = parseFloat(venta_dolares_blue.toFixed(2))
             
