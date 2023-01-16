@@ -115,9 +115,7 @@ function borrar_input(){
     let form = document.getElementById("form");
 
     form.addEventListener("focusout" , function(e){
-        if(input_dolares > 0 || input_pesos > 0){
             location.reload()
-        }
     })
 
 }
