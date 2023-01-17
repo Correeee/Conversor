@@ -181,6 +181,7 @@ input::placeholder{
     justify-items: center;
     align-items: center;
     margin: 0 0;
+    cursor: pointer;
 }
 
 .hora{
