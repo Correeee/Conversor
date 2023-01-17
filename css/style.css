@@ -157,6 +157,10 @@ input::placeholder{
     height: 20rem;
 }
 
+.div__compra:hover, .div__venta:hover{
+    transform: scale(1.5);
+}
+
 .div__compraventa{
     display: flex;
     flex-direction: column;
@@ -168,6 +172,7 @@ input::placeholder{
 .div__compra, .div__venta{
     display: flex;
     flex-direction: row;
+    transition: 0.5s;
 }
 
 .div__dolar{
@@ -223,8 +228,9 @@ a{
 a:hover{
     color: var(--color-azul);
 }
-
-
+.input_pesos_color{
+    color: red;
+}
 /*MEDIA*/
 @media screen and (max-width: 768px){
 
@@ -282,6 +288,10 @@ a:hover{
         height: 17rem;
     }
 
+    .div__compra:hover, .div__venta:hover{
+        transform: scale(1.35);
+    }
+
 }
 
 @media screen and (max-width: 350px){
@@ -305,5 +315,9 @@ a:hover{
 
     .titulo__alerta{
         font-size: small;
+    }
+
+    .div__compra:hover, .div__venta:hover{
+        transform: scale(1.20);
     }
 }
