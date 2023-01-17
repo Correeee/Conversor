@@ -1,3 +1,6 @@
+////////////////SONIDO///////////////////////////
+
+let sonido = new Audio("multimedia/sonido/notification.mp3")
 
 ////////////////VARIABLES////////////////////////
 
@@ -123,6 +126,8 @@ function notificaciones(){
                 background: "linear-gradient(to right, #457b9d, #457b9d)",
             }      
             }).showToast();
+            sonido.play()
+            sonido.currentTime = 0;
         }
     })
 
@@ -137,6 +142,8 @@ function notificaciones(){
                 background: "linear-gradient(to right, #52b788, #52b788)",
             }
             }).showToast();
+            sonido.play()
+            sonido.currentTime = 0;
         }
     })
 }
