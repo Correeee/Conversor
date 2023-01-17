@@ -41,7 +41,6 @@ function api(){
 
         input_pesos.placeholder=`ARS ${dolar_blue_venta}`;
         input_dolares.placeholder= "USD 1.00";
-
       // Aquí puedes usar los datos recibidos
     })
     .catch(error => console.error(error));
@@ -76,7 +75,6 @@ function calculadora(){
             if(input_dolares.value == "$" + NaN){
                 input_dolares.value = ""
             }
-            
 
             console.log("INPUT PESOS:" , input_pesos)
             console.log("INPUT DÓLARES:" , input_dolares.value)            
@@ -111,12 +109,42 @@ function calculadora(){
 }
 
 
+function notificaciones(){
+
+    input_pesos.addEventListener("focusout" , function(e){
+        let input_dolares = document.getElementById("input_dolares")
+        input_pesos = e.target.value
+        Toastify({
+
+            text: `${input_pesos} ARS convertidos a ${input_dolares.value}`,
+            duration: 3000,
+            style: {
+                background: "linear-gradient(to right, #457b9d, #457b9d)",
+            }      
+            }).showToast();
+    })
+    input_dolares
+    .addEventListener("focusout" , function(e){
+        let input_pesos = document.getElementById("input_pesos")
+        input_dolares = e.target.value
+        Toastify({
+
+            text: `${input_dolares} USD convertidos a ${input_pesos.value}`,
+            duration: 3000,
+            style: {
+                background: "linear-gradient(to right, #52b788, #52b788)",
+            }
+            }).showToast();
+    })
+}
+
+
 function limpiar_input(){
 
     form.addEventListener("focusout" , function(e){
         form.reset()
     })
 }
-
+notificaciones();
 limpiar_input()
 calculadora();
