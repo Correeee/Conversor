@@ -111,12 +111,12 @@ function calculadora(){
 }
 
 
-function borrar_input(){
+function limpiar_input(){
 
     form.addEventListener("focusout" , function(e){
         form.reset()
     })
 }
 
-borrar_input()
+limpiar_input()
 calculadora();
