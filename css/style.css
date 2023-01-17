@@ -227,15 +227,22 @@ a:hover{
 
 
 /*MEDIA*/
+@media screen and (max-width: 768px){
 
-@media screen and (max-width: 670px ) {
+    .toastify{
+        font-size: medium;
+    }
+
+} 
+@media screen and (max-width: 670px){
     
     .div__dolares{
         width: 35rem;
     }
+
 }
 
-@media screen and (max-width: 600px ) {
+@media screen and (max-width: 600px){
 
     h1{
         font-size: 3rem;
@@ -246,7 +253,7 @@ a:hover{
     }
 }
 
-@media screen and (max-width: 500px ) {
+@media screen and (max-width: 500px){
     
     .div__dolares{
         width: 25rem;
@@ -257,7 +264,7 @@ a:hover{
     }
 }
 
-@media screen and (max-width: 425px ) {
+@media screen and (max-width: 425px){
     
     .titulo__oficial, .titulo__blue{
         font-size: 1.5rem;
@@ -275,9 +282,10 @@ a:hover{
         width: 20rem;
         height: 17rem;
     }
+
 }
 
-@media screen and (max-width: 350px ) {
+@media screen and (max-width: 350px){
     
     .div__dolares{
         width: 17rem;
