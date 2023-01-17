@@ -60,7 +60,7 @@ function calculadora(){
             let input_dolares = document.getElementById("input_dolares")
             console.log(input_dolares.value)
 
-            input_pesos = parseInt(e.target.value);
+            input_pesos = parseFloat(e.target.value);
 
             let compra_dolares_blue = input_pesos / dolar_blue_venta; //OPERACIÓN
 
@@ -88,7 +88,7 @@ function calculadora(){
         input_dolares.addEventListener("keyup" , function(e){
             let input_pesos = document.getElementById("input_pesos")
             console.log(input_pesos.value)
-            input_dolares = parseInt(e.target.value);
+            input_dolares = parseFloat(e.target.value);
 
             let venta_dolares_blue = input_dolares * dolar_blue_compra;  //OPERACIÓN
 
