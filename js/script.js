@@ -115,6 +115,7 @@ function notificaciones(){
         let input_dolares = document.getElementById("input_dolares")
         input_pesos = e.target.value
 
+        if(input_pesos > 0){
         Toastify({
             text: `${input_pesos} ARS convertidos a ${input_dolares.value}`,
             duration: 3000,
@@ -122,12 +123,13 @@ function notificaciones(){
                 background: "linear-gradient(to right, #457b9d, #457b9d)",
             }      
             }).showToast();
+        }
     })
 
     input_dolares.addEventListener("focusout" , function(e){
         let input_pesos = document.getElementById("input_pesos")
         input_dolares = e.target.value
-
+        if(input_dolares > 0){
         Toastify({
             text: `${input_dolares} USD convertidos a ${input_pesos.value}`,
             duration: 3000,
@@ -135,6 +137,7 @@ function notificaciones(){
                 background: "linear-gradient(to right, #52b788, #52b788)",
             }
             }).showToast();
+        }
     })
 }
 
