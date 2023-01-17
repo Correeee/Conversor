@@ -8,8 +8,6 @@ let blue_compra = document.getElementById("blue_compra")
 
 let input_pesos = document.getElementById("input_pesos");
 let input_dolares = document.getElementById("input_dolares");
-input_pesos.value = ""
-input_dolares.value = ""
 
 let btn_cambio = document.getElementById("btn_cambio")
 
@@ -57,17 +55,19 @@ function calculadora(){
 
         input_pesos.addEventListener("keyup" , function(e){
 
+            let input_dolares = document.getElementById("input_dolares")
+            console.log(input_dolares.value)
+
             input_pesos = parseInt(e.target.value);
 
             let compra_dolares_blue = input_pesos / dolar_blue_venta; //OPERACIÓN
 
             compra_dolares_blue = parseFloat(compra_dolares_blue.toFixed(2))
 
-            console.log(compra_dolares_blue)
+            console.log("RESULTADO:" , compra_dolares_blue)
 
             input_dolares.value = compra_dolares_blue
             
-
             input_dolares.value = Intl.NumberFormat("en-US", {
                 style: "currency",
                 currency: "USD"
@@ -85,7 +85,8 @@ function calculadora(){
 
         
         input_dolares.addEventListener("keyup" , function(e){
-
+            let input_pesos = document.getElementById("input_pesos")
+            console.log(input_pesos.value)
             input_dolares = parseInt(e.target.value);
 
             let venta_dolares_blue = input_dolares * dolar_blue_compra;  //OPERACIÓN
@@ -94,14 +95,14 @@ function calculadora(){
             
             input_pesos.value = venta_dolares_blue
             
-            input_pesos.value = Intl.NumberFormat("en-US", {
-                style: "currency",
-                currency: "ARS"
-            }).format(venta_dolares_blue)
+                input_pesos.value = Intl.NumberFormat("en-US", {
+                    style: "currency",
+                    currency: "ARS"
+                }).format(venta_dolares_blue)
 
-            if(input_pesos.value == "ARS" + NaN){
-                input_pesos.value = ""
-            }
+                if(input_pesos.value == "ARS" + NaN){
+                    input_pesos.value = ""
+                }
 
             console.log("INPUT PESOS:" , input_pesos.value)
             console.log("INPUT DÓLARES:" , input_dolares)        
@@ -112,12 +113,9 @@ function calculadora(){
 
 function borrar_input(){
 
-    let form = document.getElementById("form");
-
     form.addEventListener("focusout" , function(e){
-            location.reload()
+        form.reset()
     })
-
 }
 
 borrar_input()
