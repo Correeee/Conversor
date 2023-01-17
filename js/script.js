@@ -121,7 +121,7 @@ function notificaciones(){
         if(input_pesos > 0){
         Toastify({
             text: `${input_pesos} ARS convertidos a ${input_dolares.value}`,
-            duration: 3000,
+            duration: 5000,
             style: {
                 background: "linear-gradient(to right, #457b9d, #457b9d)",
             }      
@@ -137,7 +137,7 @@ function notificaciones(){
         if(input_dolares > 0){
         Toastify({
             text: `${input_dolares} USD convertidos a ${input_pesos.value}`,
-            duration: 3000,
+            duration: 5000,
             style: {
                 background: "linear-gradient(to right, #52b788, #52b788)",
             }
