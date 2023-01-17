@@ -225,7 +225,6 @@ a:hover{
 }
 
 
-
 /*MEDIA*/
 @media screen and (max-width: 768px){
 
@@ -293,7 +292,7 @@ a:hover{
 
     .div__calculadora{
         width: 17rem;
-        height: 15rem;
+        height: 16.5rem;
     }
 
     .titulo__calculadora{
@@ -302,5 +301,9 @@ a:hover{
 
     input{
         width: 13rem;
+    }
+
+    .titulo__alerta{
+        font-size: small;
     }
 }
