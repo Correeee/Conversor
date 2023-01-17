@@ -114,8 +114,8 @@ function notificaciones(){
     input_pesos.addEventListener("focusout" , function(e){
         let input_dolares = document.getElementById("input_dolares")
         input_pesos = e.target.value
-        Toastify({
 
+        Toastify({
             text: `${input_pesos} ARS convertidos a ${input_dolares.value}`,
             duration: 3000,
             style: {
@@ -123,12 +123,12 @@ function notificaciones(){
             }      
             }).showToast();
     })
-    input_dolares
-    .addEventListener("focusout" , function(e){
+
+    input_dolares.addEventListener("focusout" , function(e){
         let input_pesos = document.getElementById("input_pesos")
         input_dolares = e.target.value
-        Toastify({
 
+        Toastify({
             text: `${input_dolares} USD convertidos a ${input_pesos.value}`,
             duration: 3000,
             style: {
