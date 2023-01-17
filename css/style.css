@@ -194,7 +194,7 @@ input::placeholder{
     align-items: center;
     justify-content: center;
     text-align: center;
-    width: 28rem;
+    max-width: 34rem;
     height: 2rem;
     font-size: large;
     user-select: none;
@@ -283,9 +283,6 @@ a:hover{
         height: 17rem;
     }
 
-    .toastify{
-        font-size: small;
-    }
 }
 
 @media screen and (max-width: 350px){
