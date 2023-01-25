@@ -234,6 +234,21 @@ a:hover{
 .input_pesos_color{
     color: red;
 }
+
+/*WEB*/
+
+*::-webkit-scrollbar {
+    width: 8px;
+}
+
+  *::-webkit-scrollbar-track {
+    background: whitesmoke;
+}
+
+  *::-webkit-scrollbar-thumb {
+    background-color: var(--color-azul);
+}
+
 /*MEDIA*/
 @media screen and (max-width: 768px){
 
