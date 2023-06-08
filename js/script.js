@@ -20,13 +20,13 @@ let dolar_blue_compra;
 let dolar_blue_venta;
 
 function api(){
-    fetch('https://api.bluelytics.com.ar/v2/latest', {
+    fetch('https://api.bluelytics.com.ar/v2/latest'/*, {
         method: 'GET',
         headers: {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer YOUR_API_KEY'
         }
-    })
+    }*/)
     .then(response => response.json())
     .then(data => {
         // console.log(data);
